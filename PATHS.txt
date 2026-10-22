@@ -1,11 +1,11 @@
-煉獄挑戰 1.3 完整專案
+極限挑戰 1.4 完整專案
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile
 
 完整 ZIP
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile.zip
 
 上版 ZIP
-/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile_v1.2.1.zip
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile_v1.3.zip
 
 程式及資源路徑
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.gitignore
@@ -15,6 +15,10 @@
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/README.md
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/app.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/audio.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-extreme/app.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-extreme/game.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-extreme/index.html
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-extreme/tests/game.test.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-guide-fix/app.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-guide-fix/game.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-guide-fix/styles.css
@@ -35,6 +39,7 @@
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-inferno/tests/game.test.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/VALIDATION.md
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/desktop.png
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/extreme-layouts.png
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/hard-layouts.png
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/hard-web.png
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/hell-layouts.png

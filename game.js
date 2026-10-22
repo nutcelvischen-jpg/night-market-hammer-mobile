@@ -1,6 +1,6 @@
 // Deterministic game rules, independent of the screen and audio.
-export const ROUND_SECONDS = 25;
-export const HARD = Object.freeze({center:.14, miss:.52, edge:.30, edgePower:.40, flush:2, overdrive:3, missPenalty:4, bendPenalty:7});
+export const ROUND_SECONDS = 20;
+export const HARD = Object.freeze({center:.14, miss:.52, edge:.30, edgePower:.40, flush:2, overdrive:3, missPenalty:5, bendPenalty:9});
 export const NAIL_COUNT = 5;
 export const HIT_AT = 0.3;
 export const STRIKE_END = 1.55;
@@ -60,7 +60,7 @@ export class NailGame {
     const before=this.remaining;
     this.remaining=Math.max(0, this.remaining - dt);
     if (this.phase==='aim') {
-      this.aimTime+=dt; this.aim=Math.sin(this.aimTime * (5.6+this.active*.55) + this.aimPhase + .24*Math.sin(this.aimTime*1.7)) * .97;
+      this.aimTime+=dt; this.aim=Math.sin(this.aimTime * (6.8+this.active*.65) + this.aimPhase + .24*Math.sin(this.aimTime*1.7)) * .97;
     } else if (this.phase==='power' && this.charging) {
       this.chargeTime+=dt; this.power=(1 - Math.cos(this.chargeTime * Math.PI / this.chargePeakSeconds)) / 2;
     } else if (this.phase==='strike') {
