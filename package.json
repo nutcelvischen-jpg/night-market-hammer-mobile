@@ -1,0 +1,11 @@
+{
+  "name": "night-market-hammer-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "手機版夜市釘孤枝，原生 Canvas + 台語老闆配音",
+  "scripts": {
+    "test": "node --test tests/*.test.js && node tests/voice-audio.cjs",
+    "start": "python3 -m http.server 8093"
+  }
+}

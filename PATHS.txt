@@ -1,0 +1,39 @@
+手機簡化版完整專案路徑
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile
+
+完整專案 ZIP
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile.zip
+
+所有檔案
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.gitignore
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.nojekyll
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/DESIGN.md
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/PATHS.txt
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/PRODUCT.md
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/README.md
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/app.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/audio.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/VALIDATION.md
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/desktop.png
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/mobile-layouts.png
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/game.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/icon.svg
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/index.html
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/package.json
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/scene.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/scripts/generate_voice.py
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/styles.css
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/tests/game.test.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/tests/preview.html
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/tests/voice-audio.cjs
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/voice/README.md
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/voice/bent_dance.mp3
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/voice/bent_heart.mp3
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/voice/intro.mp3
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/voice/miss_air.mp3
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/voice/miss_love.mp3
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/voice/success.mp3
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/voice_lines.json
+
+本機預覽
+http://localhost:8093/
