@@ -5,7 +5,7 @@ const $=id=>document.getElementById(id);
 const action=$('action'), stage=$('stage'), scene=new Scene($('scene'));
 const progress=[...$('nail-progress').children];
 let lastPhase='', pointer=null, keyboard=false, lastTime=performance.now(), previousSecond=-1;
-const labels={miss:['落空！扣 2 秒','再瞄準一次，準星進綠區再按。'],bent:['敲歪！扣 3 秒','下一根輕一點，別超過綠區。'],done:['漂亮，釘平了！','保利達 B！換下一根。'],partial:['有進去，再一槌！','釘子變短了，下一槌也要輕一點。'],late:['時間到！','這一槌太晚了，下次再挑戰。']};
+const labels={miss:['落空！扣 3 秒','再瞄準一次，準星進綠區再按。'],bent:['敲歪！扣 5 秒','下一根輕一點，別超過綠區。'],done:['漂亮，釘平了！','保利達 B！換下一根。'],partial:['有進去，再一槌！','釘子變短了，下一槌也要輕一點。'],late:['時間到！','這一槌太晚了，下次再挑戰。']};
 const game=new NailGame((event,result)=>{
   if(event==='intro')boss.play('intro');
   if(event==='swing')sfx.playSwingWhoosh(.3);
@@ -33,7 +33,7 @@ function renderUI(){
     lastPhase=phase;
     progress.forEach((p,i)=>{const state=game.nails[i];p.className=state==='ready'?(i===game.active?'current':''):state;p.textContent=state==='done'?'✓':state==='bent'?'×':i+1;p.setAttribute('aria-label',`第 ${i+1} 根，${state==='done'?'釘平':state==='bent'?'敲歪':'待敲'}`);});
     $('scene-label').hidden=!['ready','result','finished'].includes(phase);
-    if(phase==='ready'){$('step').textContent='硬漢挑戰 · 45 秒 / 5 根';$('instruction').textContent='瞄準，再用力！';$('hint').textContent='落空扣 2 秒、敲歪扣 3 秒。越後面越快。';action.textContent='開始挑戰';$('scene-label').textContent='一根一根來，釘平就算贏。';}
+    if(phase==='ready'){$('step').textContent='地獄挑戰 · 35 秒 / 5 根';$('instruction').textContent='瞄準，再用力！';$('hint').textContent='落空扣 3 秒、敲歪扣 5 秒。越後面越快。';action.textContent='開始挑戰';$('scene-label').textContent='一根一根來，釘平就算贏。';}
     if(phase==='aim'){$('step').textContent=`第 ${game.active+1} 根 · 先瞄準`;$('instruction').textContent='準星到綠區，按一下';$('hint').textContent='準星會變速，進綠區再鎖定。';action.textContent='鎖定瞄準';}
     if(phase==='power'){$('step').textContent=`第 ${game.active+1} 根 · 再出力`;$('instruction').textContent='按住蓄力，綠區放開';$('hint').textContent=Math.abs(game.lockedAim)>HARD.miss?'這次瞄偏了，按「重瞄」再試一次。':Math.abs(game.lockedAim)>HARD.edge?'瞄得有點偏，大力敲容易歪。':'看力量到綠區，就放開！';action.textContent='按住蓄力';}
     if(phase==='strike'){$('step').textContent='慢慢看，釘子下去了';$('instruction').textContent='這一槌，敲得如何？';$('hint').textContent='';action.textContent='敲擊中…';}

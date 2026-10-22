@@ -1,6 +1,6 @@
 // Deterministic game rules, independent of the screen and audio.
-export const ROUND_SECONDS = 45;
-export const HARD = Object.freeze({center:.20, miss:.62, edge:.38, edgePower:.48, flush:3, overdrive:4, missPenalty:2, bendPenalty:3});
+export const ROUND_SECONDS = 35;
+export const HARD = Object.freeze({center:.14, miss:.52, edge:.30, edgePower:.40, flush:2, overdrive:3, missPenalty:3, bendPenalty:5});
 export const NAIL_COUNT = 5;
 export const HIT_AT = 0.3;
 export const STRIKE_END = 1.55;
@@ -19,6 +19,7 @@ export function judgeHit(height, aim, power) {
   return {kind:next <= HARD.flush ? 'done' : 'partial', height:next <= HARD.flush ? 0 : next, driven:height - (next <= HARD.flush ? 0 : next)};
 }
 export function powerZone(height, aim) {
+  if (Math.abs(aim) > HARD.miss) return {low:1, high:0};
   const efficiency = 1 - Math.max(0, Math.abs(aim) - HARD.center) * .75;
   return {low:Math.sqrt(Math.max(0, height - HARD.flush) / (80 * efficiency)), high:Math.min(1, Math.abs(aim) > HARD.edge ? HARD.edgePower : 1, Math.sqrt((height + HARD.overdrive) / (80 * efficiency)))};
 }
@@ -31,7 +32,7 @@ export class NailGame {
     this.strike=null; this.result=null; this.resultTime=0; this.paused=false; this.resetAim();
   }
   resetAim() { this.aimTime=0; this.aimPhase=.8+this.random()*.6+(this.random()>.5?Math.PI:0); this.aim=.97*Math.sin(this.aimPhase); }
-  get chargePeakSeconds() { return .82 - this.active * .035; }
+  get chargePeakSeconds() { return .76 - this.active * .03; }
   get score() { return this.nails.filter(n => n === 'done').length; }
   get resolved() { return this.nails.filter(n => n !== 'ready').length; }
   start() { if (this.phase !== 'ready') return; this.phase='aim'; this.onEvent('intro'); }
@@ -52,7 +53,7 @@ export class NailGame {
     const before=this.remaining;
     this.remaining=Math.max(0, this.remaining - dt);
     if (this.phase==='aim') {
-      this.aimTime+=dt; this.aim=Math.sin(this.aimTime * (3.5+this.active*.35) + this.aimPhase + .24*Math.sin(this.aimTime*1.7)) * .97;
+      this.aimTime+=dt; this.aim=Math.sin(this.aimTime * (4.4+this.active*.4) + this.aimPhase + .24*Math.sin(this.aimTime*1.7)) * .97;
     } else if (this.phase==='power' && this.charging) {
       this.chargeTime+=dt; this.power=(1 - Math.cos(this.chargeTime * Math.PI / this.chargePeakSeconds)) / 2;
     } else if (this.phase==='strike') {

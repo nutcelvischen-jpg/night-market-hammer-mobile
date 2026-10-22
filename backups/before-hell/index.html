@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7f2e9">
+  <meta name="description" content="手機版夜市釘孤枝：瞄準、蓄力、敲下去！45 秒挑戰五根釘子，還有台語老闆的爆笑配音。">
+  <title>夜市釘孤枝 · 手機版</title>
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main id="game" aria-label="夜市釘孤枝遊戲">
+    <header><h1>夜市釘孤枝<span>敲一下，拚手感。</span></h1><button id="sound-toggle" class="quiet" type="button" aria-pressed="false" aria-label="靜音音效與老闆配音">聲音 開</button></header>
+    <div class="round-strip"><div id="timer" aria-label="剩餘時間 45 秒"><strong id="seconds">45</strong><span>秒</span></div><ol id="nail-progress" aria-label="五根釘子的完成狀態"><li class="current" aria-label="第 1 根，待敲">1</li><li aria-label="第 2 根，待敲">2</li><li aria-label="第 3 根，待敲">3</li><li aria-label="第 4 根，待敲">4</li><li aria-label="第 5 根，待敲">5</li></ol></div>
+    <section id="stage" aria-label="鐵鎚與釘子">
+      <canvas id="scene" aria-label="鐵鎚敲釘子的動畫；請使用下方操作按鈕"></canvas>
+      <div id="scene-label">一根一根來，釘平就算贏。</div>
+      <div id="depth" hidden><strong id="depth-value">0</strong><span>mm 釘入</span></div>
+      <div id="boss-caption" role="status" aria-live="polite" hidden><strong id="boss-line"></strong><span id="boss-tailo" lang="nan-Latn-TW"></span></div>
+      <div id="pause-cover" hidden><strong>先歇一下</strong><button id="resume" type="button">繼續挑戰</button></div>
+    </section>
+    <section id="controls" aria-label="遊戲操作">
+      <div class="instruction"><div><p id="step">硬漢挑戰 · 45 秒 / 5 根</p><h2 id="instruction">瞄準，再用力！</h2></div><button id="reaim" class="quiet" type="button" hidden>重瞄</button></div>
+      <div id="meter-wrap" hidden><div id="meter" role="img" aria-label="瞄準條，中央綠區為最佳命中位置"><span id="zone"></span><span id="power-fill"></span><span id="needle"></span></div><div class="meter-labels"><span id="meter-left">偏左</span><span id="meter-center">綠區最準</span><span id="meter-right">偏右</span></div></div>
+      <p id="hint">落空扣 2 秒、敲歪扣 3 秒。越後面越快。</p>
+      <button id="action" type="button">開始挑戰</button>
+    </section>
+    <noscript>請開啟瀏覽器的 JavaScript，才能玩釘孤枝。</noscript>
+  </main>
+</body>
+</html>

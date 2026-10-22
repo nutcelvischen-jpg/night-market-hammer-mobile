@@ -10,7 +10,7 @@ test('requires aim and charge before a strike; cancelled hold does not fire',()=
 test('all five nails score; intro once; restart clears the round',()=>{
  const events=[];const g=new NailGame((e,r)=>events.push([e,r]));g.start();
  for(let i=0;i<5;i++){hit(g,.94);if(i<4)g.tick(1.3);}
- assert.equal(g.phase,'finished');assert.equal(g.score,5);assert.equal(g.shots,5);assert.equal(events.filter(e=>e[0]==='intro').length,1);assert.equal(events.filter(e=>e[0]==='result'&&e[1].kind==='done').length,5);g.reset();assert.equal(g.remaining,45);assert.equal(g.score,0);assert.equal(g.active,0);
+ assert.equal(g.phase,'finished');assert.equal(g.score,5);assert.equal(g.shots,5);assert.equal(events.filter(e=>e[0]==='intro').length,1);assert.equal(events.filter(e=>e[0]==='result'&&e[1].kind==='done').length,5);g.reset();assert.equal(g.remaining,35);assert.equal(g.score,0);assert.equal(g.active,0);
 });
 test('miss leaves nail intact; two miss voices can be routed separately from partial hits',()=>{
  assert.equal(judgeHit(70,.9,1).kind,'miss');assert.equal(judgeHit(70,.9,1).height,70);assert.equal(judgeHit(70,0,.4).kind,'partial');
@@ -41,13 +41,37 @@ test('local voice files, metadata and no remote runtime dependency',()=>{
 
 test('hard mode starts off-center, reaim never grants an instant bullseye, later nails accelerate',()=>{
  const g=new NailGame(()=>{},()=>.25);g.start();assert(Math.abs(g.aim)>.6);g.lockAim();g.reaim();assert(Math.abs(g.aim)>.6);
- const first=g.chargePeakSeconds;g.active=4;assert(g.chargePeakSeconds<first);assert.equal(g.remaining,45);
+ const first=g.chargePeakSeconds;g.active=4;assert(g.chargePeakSeconds<first);assert.equal(g.remaining,35);
 });
 test('miss and bend have explicit time costs, never double charge or go below zero',()=>{
- for(const [aim,power,cost]of [[.9,.94,2],[0,1,3]]){const g=new NailGame();g.start();hit(g,power,aim);assert(Math.abs(g.remaining-(45-STRIKE_END-cost))<1e-9);const before=g.remaining;g.tick(.1);assert(Math.abs(g.remaining-(before-.1))<1e-9);}
+ for(const [aim,power,cost]of [[.9,.94,3],[0,1,5]]){const g=new NailGame();g.start();hit(g,power,aim);assert(Math.abs(g.remaining-(35-STRIKE_END-cost))<1e-9);const before=g.remaining;g.tick(.1);assert(Math.abs(g.remaining-(before-.1))<1e-9);}
  const g=new NailGame();g.start();g.remaining=2;hit(g,1);assert.equal(g.remaining,0);assert.equal(g.phase,'finished');
 });
 test('hard mode narrows both accuracy and overdrive tolerance; marked power intervals remain honest',()=>{
- assert.equal(judgeHit(70,.65,.9).kind,'miss');assert.equal(judgeHit(70,.4,.6).kind,'bent');assert.equal(judgeHit(70,0,.98).kind,'bent');assert.equal(HARD.center,.2);
+ assert.equal(judgeHit(70,.65,.9).kind,'miss');assert.equal(judgeHit(70,.4,.6).kind,'bent');assert.equal(judgeHit(70,0,.98).kind,'bent');assert.equal(HARD.center,.14);
  for(const h of [70,50,20,6])for(const aim of [0,.18,.3,.39,.6]){const z=powerZone(h,aim);if(z.low<=z.high)for(const f of [.1,.5,.9])assert.equal(judgeHit(h,aim,z.low+(z.high-z.low)*f).kind,'done');}
+});
+
+test('hell difficulty tightens the previous miss, edge and overdrive boundaries',()=>{
+ assert.equal(judgeHit(70,.56,.5).kind,'miss');
+ assert.equal(judgeHit(70,.34,.44).kind,'bent');
+ assert.equal(judgeHit(70,0,Math.sqrt(73.5/80)).kind,'bent');
+ assert.equal(judgeHit(70,0,Math.sqrt(67.5/80)).kind,'partial');
+ assert(powerZone(6,.56).low>powerZone(6,.56).high,'missed aim never advertises a success window');
+});
+test('five perfect nails remain reachable within 35 seconds at phone and desktop frame rates',()=>{
+ for(const fps of [30,60,120]) {
+  const g=new NailGame(()=>{},()=>.25);g.start();
+  for(let frame=0;frame<35*fps && g.phase!=='finished';frame++) {
+   if(g.phase==='aim' && Math.abs(g.aim)<HARD.center)g.lockAim();
+   if(g.phase==='power') {
+    if(!g.charging)g.press();
+    const zone=powerZone(g.height,g.lockedAim);
+    if(g.power>=zone.low && g.power<=zone.high)g.release();
+   }
+   g.tick(1/fps);
+  }
+  assert.equal(g.score,5,`${fps} fps must leave a reachable winning interval`);
+  assert(g.remaining>0);
+ }
 });
