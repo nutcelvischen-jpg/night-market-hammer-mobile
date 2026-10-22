@@ -1,5 +1,7 @@
 # 夜市釘孤枝 · 手機簡化版
 
+**目前版本：煉獄挑戰 1.3，25 秒／5 根，落空扣 4 秒、敲歪扣 7 秒。**
+
 一次一根釘子、一顆主要按鈕，保留原版六段粗獷台語配音。
 
 📱 **手機版線上試玩**：[https://nutcelvischen-jpg.github.io/night-market-hammer-mobile/](https://nutcelvischen-jpg.github.io/night-market-hammer-mobile/)  
@@ -25,7 +27,7 @@ python3 -m http.server 8093 --directory "/Users/chenchunchih/Desktop/voice to te
 
 ## 玩法
 
-1. 點「開始挑戰」啟動 35 秒。
+1. 點「開始挑戰」啟動 25 秒。
 2. 準星進綠區，點「鎖定瞄準」。
 3. 按住同一顆按鈕蓄力，力量到綠區時放開。
 4. 釘平一根得到 100 分，自動換下一根；打歪也會換下一根。部分釘入可以補敲。
@@ -49,7 +51,7 @@ python3 -m http.server 8093 --directory "/Users/chenchunchih/Desktop/voice to te
 | `index.html` | 入口、操作介面、字幕 |
 | `styles.css` | 手機直向、小螢幕、橫向與桌面排版 |
 | `app.js` | 觸控／鍵盤事件、畫面與音效串接 |
-| `game.js` | 瞄準、蓄力、35 秒、判定與計分 |
+| `game.js` | 瞄準、蓄力、25 秒、判定與計分 |
 | `scene.js` | 鐵鎚、釘子、木頭、慢動作與反彈的 Canvas 繪製 |
 | `audio.js` | 原版音效與配音播放、靜音、避免重疊 |
 | `icon.svg` | 網站圖示 |
@@ -104,3 +106,11 @@ npm test
 - 調整入口：game.js 的 HARD、ROUND_SECONDS、chargePeakSeconds 與瞄準速度。
 - 前一版程式備份在 backups/before-hell，前一版完整 ZIP 為相鄰的 night_market_hammer_mobile_v1.1.zip。
 - 目前本機與 ZIP 為 1.2；上方 GitHub Pages 需自行推送後才會更新。
+
+## 力量提示修正 1.2.1
+
+瞄偏時，一槌釘平所需力道可能高於安全上限，因此原本沒有綠區。現在綠區代表本槌釘平、黃區代表安全輕敲（仍需補槌）；完全瞄空時明確顯示「無命中區，請重瞄」。目標色區置於蓄力色條上方，並顯示實際力量百分比。沒有放寬命中或力道判定，35 秒與扣秒規則、原六段配音不變。
+
+## 煉獄挑戰 1.3
+
+本版取代前述 35 秒規則：25 秒完成五根，落空扣 4 秒，敲歪扣 7 秒。第一根準星約快 27–29%，後續逐根加速，最後一根比前版快約 30%。力量判定、綠區寬度和蓄力節奏沿用 1.2.1，避免小螢幕與低幀率手機錯失提示；綠區釘平、黃區輕敲、瞄空請重瞄，六段音檔不變。前版程式在 backups/before-inferno；完整前版 ZIP 為相鄰的 *_v1.2.1.zip。本機及新 ZIP 已更新，線上版需自行推送。

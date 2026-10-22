@@ -1,6 +1,6 @@
 // Deterministic game rules, independent of the screen and audio.
-export const ROUND_SECONDS = 35;
-export const HARD = Object.freeze({center:.14, miss:.52, edge:.30, edgePower:.40, flush:2, overdrive:3, missPenalty:3, bendPenalty:5});
+export const ROUND_SECONDS = 25;
+export const HARD = Object.freeze({center:.14, miss:.52, edge:.30, edgePower:.40, flush:2, overdrive:3, missPenalty:4, bendPenalty:7});
 export const NAIL_COUNT = 5;
 export const HIT_AT = 0.3;
 export const STRIKE_END = 1.55;
@@ -22,6 +22,13 @@ export function powerZone(height, aim) {
   if (Math.abs(aim) > HARD.miss) return {low:1, high:0};
   const efficiency = 1 - Math.max(0, Math.abs(aim) - HARD.center) * .75;
   return {low:Math.sqrt(Math.max(0, height - HARD.flush) / (80 * efficiency)), high:Math.min(1, Math.abs(aim) > HARD.edge ? HARD.edgePower : 1, Math.sqrt((height + HARD.overdrive) / (80 * efficiency)))};
+}
+// A green zone promises a finish; amber only promises a safe partial hit.
+export function powerGuide(height, aim) {
+  if (Math.abs(aim) > HARD.miss) return {kind:'miss', low:0, high:0};
+  const zone=powerZone(height, aim);
+  if (zone.high-zone.low > 1e-6) return {kind:'done', ...zone};
+  return {kind:'partial', low:zone.high*.45, high:zone.high*.85};
 }
 export class NailGame {
   constructor(onEvent = () => {}, random = Math.random) { this.onEvent = onEvent; this.random = random; this.reset(); }
@@ -53,7 +60,7 @@ export class NailGame {
     const before=this.remaining;
     this.remaining=Math.max(0, this.remaining - dt);
     if (this.phase==='aim') {
-      this.aimTime+=dt; this.aim=Math.sin(this.aimTime * (4.4+this.active*.4) + this.aimPhase + .24*Math.sin(this.aimTime*1.7)) * .97;
+      this.aimTime+=dt; this.aim=Math.sin(this.aimTime * (5.6+this.active*.55) + this.aimPhase + .24*Math.sin(this.aimTime*1.7)) * .97;
     } else if (this.phase==='power' && this.charging) {
       this.chargeTime+=dt; this.power=(1 - Math.cos(this.chargeTime * Math.PI / this.chargePeakSeconds)) / 2;
     } else if (this.phase==='strike') {

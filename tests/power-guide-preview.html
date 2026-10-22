@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>力量提示驗證</title><link rel="stylesheet" href="../styles.css"><style>body{padding:24px;max-width:1050px;margin:auto}h1{font-size:24px;margin-bottom:12px}.intro{font-size:14px;line-height:1.6}.cases{display:flex;gap:20px;flex-wrap:wrap}.case{background:var(--paper);padding:24px 16px;border-radius:16px;width:310px;min-height:245px}.case h2{font-size:20px;margin-top:0}.case p{font-size:13px;line-height:1.6;min-height:42px}.case #meter{margin-top:24px}.case small{display:block;margin-top:20px;color:var(--muted)}</style><h1>力量提示驗證</h1><p class="intro">同一根 70mm 釘子，三種瞄準結果。蓄力色條填滿後，目標區仍清楚可見。</p><div class="cases"></div><script type="module">
+import {powerGuide} from '../game.js';
+for(const [aim,title,description] of [[0,'綠區：一槌釘平','瞄得準，力量進綠區才放開。'],[.4,'黃區：先輕敲','瞄得偏，這槌不能釘平；可輕敲，或重瞄。'],[.8,'瞄空：請重瞄','沒有可命中區，不會再叫你等綠區。']]){
+ const g=powerGuide(70,aim),miss=g.kind==='miss',range=`${(g.low*100).toFixed(1)}–${(g.high*100).toFixed(1)}%`;
+ const card=document.createElement('section');card.className='case';
+ card.innerHTML=`<h2>${title}</h2><p>${description}</p><div id="meter" data-guide="${g.kind}"><span id="zone" ${miss?'hidden':''} style="left:${g.low*100}%;width:${(g.high-g.low)*100}%"></span><span id="power-fill" style="width:100%"></span><span id="needle" style="left:100%"></span></div><div class="meter-labels"><span>輕</span><span id="meter-center">${miss?'無命中區 · 請重瞄':range}</span><span>重</span></div><small>使用遊戲本身的判定與樣式</small>`;
+ document.querySelector('.cases').append(card);
+}
+</script></html>

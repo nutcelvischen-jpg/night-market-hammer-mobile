@@ -13,3 +13,10 @@
 
 /* Keep the stage steady through impact; only the initial welcome omits the meter space. */
 #meter-wrap[hidden]{display:block!important;visibility:hidden}body[data-phase="ready"] #meter-wrap[hidden]{display:none!important}#hint{min-height:36px}
+
+/* Keep the true target interval above the charge fill, without widening its hit window. */
+#power-fill{z-index:1}#zone{z-index:2;top:-3px;bottom:-3px;background:#72bd8c;border:0;border-radius:2px;box-shadow:inset 1px 0 #145c3d,inset -1px 0 #145c3d;pointer-events:none}#needle{z-index:3}
+#meter[data-guide="partial"] #zone{background:#f4ce65;box-shadow:inset 1px 0 #875d0b,inset -1px 0 #875d0b}
+#meter[data-guide="partial"] + .meter-labels #meter-center{color:#78500a}
+#meter[data-guide="miss"]{outline:1px dashed #ad321c}
+#meter[data-guide="miss"] + .meter-labels #meter-center{color:#ad321c}

@@ -1,13 +1,13 @@
-地獄難度 1.2 完整專案
+煉獄挑戰 1.3 完整專案
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile
 
 完整 ZIP
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile.zip
 
-上一版 ZIP
-/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile_v1.1.zip
+上版 ZIP
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile_v1.2.1.zip
 
-程式及資源路徑（不含 Git 內部資料）
+程式及資源路徑
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.gitignore
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.nojekyll
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/DESIGN.md
@@ -15,6 +15,9 @@
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/README.md
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/app.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/audio.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-guide-fix/app.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-guide-fix/game.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-guide-fix/styles.css
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-hard/README.md
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-hard/app.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-hard/game.js
@@ -26,13 +29,19 @@
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-hell/game.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-hell/index.html
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-hell/tests/game.test.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-inferno/app.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-inferno/game.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-inferno/index.html
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-inferno/tests/game.test.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/VALIDATION.md
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/desktop.png
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/hard-layouts.png
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/hard-web.png
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/hell-layouts.png
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/hell-web.png
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/inferno-layouts.png
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/mobile-layouts.png
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/power-guide-fix.png
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/game.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/icon.svg
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/index.html
@@ -41,6 +50,8 @@
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/scripts/generate_voice.py
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/styles.css
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/tests/game.test.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/tests/power-guide-preview.html
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/tests/power-guide.test.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/tests/preview.html
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/tests/voice-audio.cjs
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/voice/README.md
