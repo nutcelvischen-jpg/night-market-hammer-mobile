@@ -1,4 +1,4 @@
-import {clamp, HIT_AT, STRIKE_END} from './game.js';
+import {clamp, HIT_AT, STRIKE_END, HARD} from './game.js';
 const ease = t => 1 - Math.pow(1-clamp(t),3);
 const mix = (a,b,t) => a + (b-a)*clamp(t);
 export function strikePose(game) {
@@ -49,7 +49,7 @@ export class Scene {
     this.ellipse(bend-2,y-1,12,2,'#e3e9de');
     if(game.phase==='aim'){
       const aimX=game.aim*44;
-      c.strokeStyle=Math.abs(game.aim)<.32?'#267556':'#b84916';c.lineWidth=2;
+      c.strokeStyle=Math.abs(game.aim)<=HARD.center?'#267556':'#b84916';c.lineWidth=2;
       c.beginPath();c.moveTo(aimX,y-29);c.lineTo(aimX,y-13);c.moveTo(aimX-8,y-21);c.lineTo(aimX+8,y-21);c.stroke();
       c.setLineDash([3,4]);c.lineWidth=1;c.beginPath();c.moveTo(aimX,y-10);c.lineTo(aimX,y+6);c.stroke();c.setLineDash([]);
     }

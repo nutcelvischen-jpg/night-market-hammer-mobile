@@ -25,7 +25,7 @@ python3 -m http.server 8093 --directory "/Users/chenchunchih/Desktop/voice to te
 
 ## 玩法
 
-1. 點「開始挑戰」啟動 60 秒。
+1. 點「開始挑戰」啟動 45 秒。
 2. 準星進綠區，點「鎖定瞄準」。
 3. 按住同一顆按鈕蓄力，力量到綠區時放開。
 4. 釘平一根得到 100 分，自動換下一根；打歪也會換下一根。部分釘入可以補敲。
@@ -49,7 +49,7 @@ python3 -m http.server 8093 --directory "/Users/chenchunchih/Desktop/voice to te
 | `index.html` | 入口、操作介面、字幕 |
 | `styles.css` | 手機直向、小螢幕、橫向與桌面排版 |
 | `app.js` | 觸控／鍵盤事件、畫面與音效串接 |
-| `game.js` | 瞄準、蓄力、60 秒、判定與計分 |
+| `game.js` | 瞄準、蓄力、45 秒、判定與計分 |
 | `scene.js` | 鐵鎚、釘子、木頭、慢動作與反彈的 Canvas 繪製 |
 | `audio.js` | 原版音效與配音播放、靜音、避免重疊 |
 | `icon.svg` | 網站圖示 |
@@ -93,3 +93,14 @@ npm test
 ```
 
 或 `node --test tests/game.test.js`。瀏覽器尺寸檢查： http://localhost:8093/tests/preview.html 。尺寸預覽不等於實體 iOS / Android 裝置測試。
+
+## 硬漢難度更新
+
+- 45 秒完成五根。落空扣 2 秒，敲歪扣 3 秒；配音維持原音檔。
+- 瞄準綠區從整條的 32% 縮至 20%；每次瞄準從偏離中央的位置開始，準星加入變速。
+- 瞄準偏差超過 0.62 會落空；偏差超過 0.38 且力量超過 48% 容易彎釘。
+- 釘平容錯改為剩餘 3mm 內；超過釘長 4mm 的力量會敲歪。顯示的綠區與實際成功判定使用同一套參數。
+- 第 1 至第 5 根逐步加快準星與蓄力。蓄滿時間從 0.82 秒縮至 0.68 秒。
+- 調整入口：game.js 的 HARD、ROUND_SECONDS、chargePeakSeconds 與瞄準速度。
+- 更新後共 12 項玩法測試，另有配音生命週期測試。
+- 簡化前的程式備份在 backups/before-hard；上一版完整 ZIP 在相鄰的 night_market_hammer_mobile_easy.zip。

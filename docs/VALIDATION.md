@@ -13,3 +13,7 @@
 - 未做實體 iOS/Android 裝置、螢幕閱讀器或母語聽感測試。尺寸模擬與指標操作不代表真實手機硬體測試。
 
 圖片：mobile-layouts.png、desktop.png。
+
+## 硬漢難度 1.1
+
+45 秒、變速瞄準、逐根加速、縮小命中容錯與落空／彎釘扣秒後，12 項玩法測試及配音測試均通過。原版 Three.js 的 72 組時間軸測試、計分／期限／聲音路由測試與新增的 45 秒／扣秒／綠區判定測試均通過。六段音檔未修改。本次截圖為 hard-layouts.png 與 hard-web.png；較早的 desktop.png、mobile-layouts.png 記錄簡單版。

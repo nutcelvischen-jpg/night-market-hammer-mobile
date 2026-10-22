@@ -1,10 +1,76 @@
-手機簡化版完整專案路徑
+硬漢難度 1.1 完整專案路徑
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile
 
-完整專案 ZIP
+完整 ZIP
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile.zip
 
+上一版 ZIP
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile_easy.zip
+
 所有檔案
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/COMMIT_EDITMSG
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/HEAD
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/config
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/description
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/applypatch-msg.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/commit-msg.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/fsmonitor-watchman.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/post-update.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/pre-applypatch.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/pre-commit.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/pre-merge-commit.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/pre-push.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/pre-rebase.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/pre-receive.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/prepare-commit-msg.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/push-to-checkout.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/sendemail-validate.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/hooks/update.sample
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/index
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/info/exclude
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/logs/HEAD
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/logs/refs/heads/main
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/logs/refs/remotes/origin/main
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/05/af5a4709deae7c399e7b5a739fa2cef2b9a544
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/13/12c860a36d4df671dd5db8644af84ec3e2909e
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/15/d8aaecf68915cb29b392981a67f4e46ff1122d
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/25/4055595e8863ffae2566f7dc76517d55701f50
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/26/949353ff8db420cb5d0d588b33c230277425ac
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/30/a122cc65e2aa5dfbe586d9773ce9fe06f278d8
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/32/45bc096608902a3180bd47ed41a0e4dbc876b0
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/38/8affa93144da9f3f495f9277050e877f82a6e3
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/3b/c7cb5362059acb888f3081991eacd04c3f90ec
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/43/6304a7fc6a616c156b9bade5dfb03b80444945
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/49/7ad1b9e52035515ef39c26c131853ada317ea8
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/4c/54fc964bab2fd67af8b85bb5fac7ccc5877ab9
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/5f/aa97232d0f478b75d94e4f933d4239405fac5e
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/70/ec8c255067775d97dfdfd758885252a722fdb1
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/77/96801f31a765343efeccd60e997140cb87e049
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/80/19d82db6d70d2bbeec4c16ad3233be02124f0d
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/86/f495f90de239eeda2307467e50835b9c5177c4
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/87/e0b9eba26e39b16301e5f1fef2a8904dc1e5cd
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/8a/8072c2f85158d0d57645b11571c07e67ed4394
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/8c/363cdbb3543f311514357d6435344fb1b90334
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/90/c59b3d79ab8c136e970dc1af8ec7b5777a5ca8
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/95/9dd6b8bddc99837c36bf29fa946f1adb93020a
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/a0/18863db6650b2fa9eaaf487a0e805efd163b7e
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/b1/ad76d15f0c3ae84532b8709357961708c950e7
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/b1/b9b21e26024fe0fd778ab0bfcf2033d223eba2
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/bb/1db1702f0193169dd2022ee2b3931082a98d20
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/bb/b0041584d2b72178f9823c088c1c842f943c65
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/c7/5d1e6be0fc90088d4cd973e01d0c146ce836ea
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/c8/0b3e1d8d98a3982049a4b7c0e7f8b46571d089
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/c9/1c06b805634bc292118df856bc8d112e9f877a
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/ce/5e01132c6228441c3e7f74aa3b3cb6f085ffba
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/cf/462cded43e34192b5271b7815413de01ae1f0c
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/d1/1b90d397323b1055218eb360ebe8bf298ca38f
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/dc/a16b9d265caa69d31a20163929ed68ec1d53a1
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/e8/2a81bf16b65116d5291a11666c2cec241fd451
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/ea/9e39057151f51939bf51a8832e3c41674274f2
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/objects/eb/f877936ab51da8c82f2bf669ac412e17c255f9
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/refs/heads/main
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.git/refs/remotes/origin/main
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.gitignore
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/.nojekyll
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/DESIGN.md
@@ -13,8 +79,16 @@
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/README.md
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/app.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/audio.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-hard/README.md
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-hard/app.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-hard/game.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-hard/index.html
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-hard/scene.js
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/backups/before-hard/tests/game.test.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/VALIDATION.md
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/desktop.png
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/hard-layouts.png
+/Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/hard-web.png
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/docs/mobile-layouts.png
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/game.js
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/icon.svg
@@ -35,5 +109,5 @@
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/voice/success.mp3
 /Users/chenchunchih/Desktop/voice to text/night_market_hammer_mobile/voice_lines.json
 
-本機預覽
+預覽
 http://localhost:8093/
