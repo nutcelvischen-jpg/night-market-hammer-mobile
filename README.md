@@ -2,6 +2,9 @@
 
 一次一根釘子、一顆主要按鈕，保留原版六段粗獷台語配音。
 
+📱 **手機版線上試玩**：[https://nutcelvischen-jpg.github.io/night-market-hammer-mobile/](https://nutcelvischen-jpg.github.io/night-market-hammer-mobile/)  
+🔨 **3D 完整版**：[https://nutcelvischen-jpg.github.io/night-market-hammer/](https://nutcelvischen-jpg.github.io/night-market-hammer/)
+
 ## 專案完整路徑
 
 ```text
